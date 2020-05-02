@@ -1,2 +1,0 @@
-FROM damianh/dotnet-core-lts-sdks:latest
-
