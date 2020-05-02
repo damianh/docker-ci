@@ -12,9 +12,9 @@ environments (see notes below).
    versions of .NET Core SDKs (3.1.x, 2.1.x), git and docker-cli . Primarily used to
    build .NET libraries, services and applications.
 
-2. [damianh/dotnet-core-node](dotnet-core-node) - Image based `dotnet-core-lts-sdks`
-   with Node LTS. Primarily used to build applications with .NET backend(s)
-   and JavaScript SPA frontend(s).
+2. [damianh/dotnet-core-node](dotnet-core-node) - Image based on `dotnet-core-lts-sdks`
+   above with addition of Node LTS. Primarily used to build applications with .NET
+   backend(s) and JavaScript SPA frontend(s).
 
 ## damianh/dotnet-core-lts-sdks
 
