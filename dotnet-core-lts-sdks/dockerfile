@@ -6,5 +6,4 @@ RUN wget -O dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Sdk/2.1
     && tar -C /usr/share/dotnet -xzf dotnet.tar.gz \
     && rm dotnet.tar.gz
 
-RUN apk add git
-RUN apk add docker-cli
+RUN apk update && apk add git && apk add docker-cli
