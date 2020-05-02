@@ -28,7 +28,7 @@ environments (see notes below).
 
 | Tag | OS Version / Arch | Contents | Dockerfile |
 | - | - | - | - |
-| 1 | Alpine 3.11 / x64 | See damianh/dotnet-core-lts-sdks:1, node 12.15.0  | [dockerfile](dotnet-core-lts-sdks/dockerfile) |
+| 1 | Alpine 3.11 / x64 | See damianh/dotnet-core-lts-sdks:1, node 12.15.0, npm 12.16.2  | [dockerfile](dotnet-core-lts-sdks/dockerfile) |
 
 [View on DockerHub](https://hub.docker.com/repository/docker/damianh/dotnet-core-node)
 
