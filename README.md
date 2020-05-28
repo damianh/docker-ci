@@ -18,17 +18,17 @@ environments (see notes below).
 
 ## damianh/dotnet-core-lts-sdks
 
-| Tag | OS Version / Arch | Contents | Dockerfile |
-| - | - | - | - |
-| 1 | Alpine 3.11 / x64 | .NET Core SDK 3.1.200, .NET Core SDK 2.1.805. git 2.24.3, docker-cli 19.03.5 | [dockerfile](dotnet-core-lts-sdks/dockerfile) |
+| Tag | OS Version / Arch | Contents | Dockerfile | CLI |
+| - | - | - | - | - |
+| 1 | Alpine 3.11 / x64 | .NET Core SDK 3.1.200, .NET Core SDK 2.1.805. git 2.24.3, docker-cli 19.03.5 | [dockerfile](dotnet-core-lts-sdks/dockerfile) | `docker pull damianh/dotnet-core-lts-sdks:1` |
 
 [View on DockerHub](https://hub.docker.com/repository/docker/damianh/dotnet-core-lts-sdks)
 
 ## damianh/dotnet-core-node
 
-| Tag | OS Version / Arch | Contents | Dockerfile |
-| - | - | - | - |
-| 1 | Alpine 3.11 / x64 | Based on damianh/dotnet-core-lts-sdks:1, node 12.15.0, npm 12.16.2  | [dockerfile](dotnet-core-lts-sdks/dockerfile) |
+| Tag | OS Version / Arch | Contents | Dockerfile | CLI |
+| - | - | - | - | - |
+| 1 | Alpine 3.11 / x64 | Based on damianh/dotnet-core-lts-sdks:1, node 12.15.0, npm 12.16.2  | [dockerfile](dotnet-core-lts-sdks/dockerfile) | `docker pull damianh/dotnet-core-node:1` |
 
 [View on DockerHub](https://hub.docker.com/repository/docker/damianh/dotnet-core-node)
 
