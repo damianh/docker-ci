@@ -1,7 +1,5 @@
 # docker-ci 
 
-![Docker Image CI](https://github.com/damianh/docker-ci/workflows/Docker%20Image%20CI/badge.svg)
-
 Collection of docker images I use to build .NET libraries, services and
 applications.
 
