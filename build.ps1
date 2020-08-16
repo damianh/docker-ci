@@ -1,4 +1,4 @@
-$versions = @(1, 2);
+$versions = @(1, 2, 3);
 
 $versions | ForEach-Object {
     docker build dotnet-core-lts-sdks/$_ -t damianh/dotnet-core-lts-sdks:$_
