@@ -1,4 +1,4 @@
-# docker-ci 
+# docker-ci
 
 Collection of docker images I use to build .NET libraries, services and
 applications.
@@ -6,15 +6,42 @@ applications.
 The images can be be run directly or be used as base images for custom build
 environments (see notes below).
 
-1. [damianh/dotnet-core-lts-sdks](dotnet-core-lts-sdks) - Image containing the LTS
-   versions of .NET Core SDKs (3.1.x, 2.1.x), git and docker-cli . Primarily used to
-   build .NET libraries, services and applications.
+1. [damianh/dotnet-sdks](dotnet-sdks) - Image containing supported versions of
+   .NET/.NET Core SDKs (5.x, 3.1.x, 2.1.x), git, and docker-cli. Used to build
+   .NET libraries, services and applications. **This replaces
+   `dotnet-core-lts-sdks` below.**
 
-2. [damianh/dotnet-core-node](dotnet-core-node) - Image based on `dotnet-core-lts-sdks`
-   above with addition of Node LTS. Primarily used to build applications with .NET
-   backend(s) and JavaScript SPA frontend(s).
+1. [damianh/dotnet-node](dotnet-node) - Image based on
+   `dotnet-sdks` above with addition of Node LTS. Used to build
+   applications with .NET backend(s) and JavaScript SPA frontend(s). **This replaces
+   `dotnet-core-node` below.**
+
+1. [damianh/dotnet-core-lts-sdks](dotnet-core-lts-sdks) (Deprecated) -  Image
+   containing the LTS versions of .NET Core SDKs (3.1.x, 2.1.x), git and
+   docker-cli . Primarily used to build .NET libraries, services and
+   applications.
+
+1. [damianh/dotnet-core-node](dotnet-core-node) (Deprecated) - Image based on
+   `dotnet-core-lts-sdks` above with addition of Node LTS. Used to build
+   applications with .NET backend(s) and JavaScript SPA frontend(s).
 
 ## damianh/dotnet-core-lts-sdks
+
+| Tag | OS Version / Arch | Contents | Dockerfile | CLI |
+| - | - | - | - | - |
+| 1 | Alpine 3.11 / x64 | .NET Core SDK 2.1.810, .NET Core SDK 3.1.400, .NET 5.0.100-RC.1, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/1/dockerfile) | `docker pull damianh/dotnet-sdks:1` |
+
+[View on DockerHub](https://hub.docker.com/repository/docker/damianh/dotnet-sdks)
+
+## damianh/dotnet-node
+
+| Tag | OS Version / Arch | Contents | Dockerfile | CLI |
+| - | - | - | - | - |
+| 1 | Alpine 3.11 / x64 | Based on damianh/dotnet-node:1, node 12.18.3, npm 6.14.6  | [dockerfile](dotnet-node/1/dockerfile) | `docker pull damianh/dotnet-node:1` |
+
+[View on DockerHub](https://hub.docker.com/repository/docker/damianh/dotnet-core-node)
+
+## damianh/dotnet-core-lts-sdks (deprecated)
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
@@ -24,7 +51,7 @@ environments (see notes below).
 
 [View on DockerHub](https://hub.docker.com/repository/docker/damianh/dotnet-core-lts-sdks)
 
-## damianh/dotnet-core-node
+## damianh/dotnet-core-node (deprecated)
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
