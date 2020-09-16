@@ -63,13 +63,13 @@ environments (see notes below).
 
 ## Notes
 
-- Images based on LTS version of software will, in general, be updated on a quarterly basis or
-  if a particular urgent fix is required.
+- Images will, in general, be updated on a bi-monthly basis or if a particular
+  urgent fix is required.
 - It is not intended to support all possible version combinations.
 - Primary usage audience are products, projects, and organizations that I am
   personally involved in and for which support will be prioritized. One is, of
   course, welcome to fork/copy/learn from the contents of this repository.
-- PRs to bump versions welcome. PRs must include Tag docs.
+- PRs to bump versions welcome. Please include Tag docs with PRs.
 
 ## Example Usages
 
