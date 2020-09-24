@@ -25,7 +25,7 @@ environments (see notes below).
    `dotnet-core-lts-sdks` above with addition of Node LTS. Used to build
    applications with .NET backend(s) and JavaScript SPA frontend(s).
 
-## damianh/dotnet-core-lts-sdks
+## damianh/dotnet-sdks
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
