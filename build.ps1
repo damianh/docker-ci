@@ -11,7 +11,7 @@ Uncomment this to rebuild if needed (but should not be needed).
 }
 #>
 
-@(2) | ForEach-Object {
+@(3) | ForEach-Object {
     docker build dotnet-sdks/$_ -t damianh/dotnet-sdks:$_
     docker push damianh/dotnet-sdks:$_
 
