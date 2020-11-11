@@ -1,7 +1,7 @@
 # docker-ci
 
 Collection of docker images I use to build .NET libraries, services and
-applications.
+.NET + Node applications.
 
 The images can be be run directly or be used as base images for custom build
 environments (see notes below).
