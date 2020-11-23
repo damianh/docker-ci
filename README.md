@@ -24,7 +24,7 @@ applications.
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
-| *4* | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.404, .NET 5.0.100, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/4/dockerfile) | `docker pull damianh/dotnet-sdks:4` |
+| *4* | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.404, .NET 5.0.100, git 2.26.2, docker-cli 19.03.12, glibc-2.32-r0, glibc-bin-2.32-r0 | [dockerfile](dotnet-sdks/4/dockerfile) | `docker pull damianh/dotnet-sdks:4` |
 | 3 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.404, .NET 5.0.100, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/3/dockerfile) | `docker pull damianh/dotnet-sdks:3` |
 | 2 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.403, .NET 5.0.100-RC.2, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/2/dockerfile) | `docker pull damianh/dotnet-sdks:2` |
 | 1 | Alpine 3.12 / x64 | .NET Core SDK 2.1.810, .NET Core SDK 3.1.400, .NET 5.0.100-RC.1, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/1/dockerfile) | `docker pull damianh/dotnet-sdks:1` |
