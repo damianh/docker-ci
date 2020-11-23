@@ -1,3 +1,0 @@
-FROM damianh/dotnet-core-lts-sdks:1
-
-RUN apk update && apk add nodejs && apk add npm
