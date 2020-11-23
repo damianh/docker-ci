@@ -38,10 +38,21 @@ applications with .NET backend(s) and JavaScript SPA frontend(s).
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
-| *4* | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:3, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/4/dockerfile) | `docker pull damianh/dotnet-node:4` |
+| *4* | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:4, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/4/dockerfile) | `docker pull damianh/dotnet-node:4` |
 | 3 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:3, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/3/dockerfile) | `docker pull damianh/dotnet-node:3` |
 | 2 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:2, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/2/dockerfile) | `docker pull damianh/dotnet-node:2` |
 | 1 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:1, node 12.18.3, npm 6.14.6  | [dockerfile](dotnet-node/1/dockerfile) | `docker pull damianh/dotnet-node:1` |
+
+## dotnet-node-pulumi-awscli
+
+Image based on `dotnet-node` above with addition of Pulumi and AWS-CLI. Used to run
+Pulumi stacks in .NET or Node/Typescript.
+
+[View on DockerHub](https://hub.docker.com/r/damianh/dotnet-node/tags)
+
+| Tag | OS Version / Arch | Contents | Dockerfile | CLI |
+| - | - | - | - | - |
+| 1 | Alpine 3.12 / x64 | Based on damianh/dotnet-node:4, typescript 2.5.3, aws-cli 2.1.3, pulumi 2.14.0  | [dockerfile](dotnet-node-pulumi-awscli/1/dockerfile) | `docker pull damianh/dotnet-node-pulumi-awscli:1` |
 
 ## Example Usages
 
