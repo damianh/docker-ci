@@ -14,6 +14,10 @@ environments (see notes below).
   personally involved with and for which support will be prioritized. One is, of
   course, welcome to fork/copy the contents of this repository.
 
+## Changelog
+
+- 2021-01-13: Built images `dotnet-sdks:5`, `dotnet-node:5` and `dotnet-node-pulumi-awscli:2`
+
 ## dotnet-sdks
 
 Image containing supported versions of .NET/.NET Core SDKs (5.x, 3.1.x,
@@ -24,7 +28,8 @@ applications.
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
-| *4* | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.404, .NET 5.0.100, git 2.26.2, docker-cli 19.03.12, glibc-2.32-r0, glibc-bin-2.32-r0 | [dockerfile](dotnet-sdks/4/dockerfile) | `docker pull damianh/dotnet-sdks:4` |
+| 5 | Alpine 3.12 / x64 | .NET Core SDK 2.1.812, .NET Core SDK 3.1.405, .NET 5.0.102, git 2.26.2, docker-cli 19.03.12, glibc-2.32-r0, glibc-bin-2.32-r0 | [dockerfile](dotnet-sdks/5/dockerfile) | `docker pull damianh/dotnet-sdks:5` |
+| 4 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.404, .NET 5.0.100, git 2.26.2, docker-cli 19.03.12, glibc-2.32-r0, glibc-bin-2.32-r0 | [dockerfile](dotnet-sdks/4/dockerfile) | `docker pull damianh/dotnet-sdks:4` |
 | 3 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.404, .NET 5.0.100, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/3/dockerfile) | `docker pull damianh/dotnet-sdks:3` |
 | 2 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.403, .NET 5.0.100-RC.2, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/2/dockerfile) | `docker pull damianh/dotnet-sdks:2` |
 | 1 | Alpine 3.12 / x64 | .NET Core SDK 2.1.810, .NET Core SDK 3.1.400, .NET 5.0.100-RC.1, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/1/dockerfile) | `docker pull damianh/dotnet-sdks:1` |
@@ -38,7 +43,8 @@ applications with .NET backend(s) and JavaScript SPA frontend(s).
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
-| *4* | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:4, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/4/dockerfile) | `docker pull damianh/dotnet-node:4` |
+| 5 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:5, node 12.20.1, npm 6.14.10  | [dockerfile](dotnet-node/5/dockerfile) | `docker pull damianh/dotnet-node:5` |
+| 4 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:4, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/4/dockerfile) | `docker pull damianh/dotnet-node:4` |
 | 3 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:3, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/3/dockerfile) | `docker pull damianh/dotnet-node:3` |
 | 2 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:2, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/2/dockerfile) | `docker pull damianh/dotnet-node:2` |
 | 1 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:1, node 12.18.3, npm 6.14.6  | [dockerfile](dotnet-node/1/dockerfile) | `docker pull damianh/dotnet-node:1` |
@@ -52,11 +58,8 @@ Pulumi stacks in .NET or Node/Typescript.
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
+| 2 | Alpine 3.12 / x64 | Based on damianh/dotnet-node:5, typescript 4.1.3, aws-cli 2.1.18, pulumi 2.17.0  | [dockerfile](dotnet-node-pulumi-awscli/1/dockerfile) | `docker pull damianh/dotnet-node-pulumi-awscli:2` |
 | 1 | Alpine 3.12 / x64 | Based on damianh/dotnet-node:4, typescript 2.5.3, aws-cli 2.1.3, pulumi 2.14.0  | [dockerfile](dotnet-node-pulumi-awscli/1/dockerfile) | `docker pull damianh/dotnet-node-pulumi-awscli:1` |
-
-## Example Usages
-
-- [ProxyKit](https://github.com/ProxyKit/ProxyKit/blob/master/build.sh)
 
 ----
 [@randompunter](https://twitter.com/randompunter)

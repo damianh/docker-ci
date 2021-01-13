@@ -1,0 +1,3 @@
+FROM damianh/dotnet-sdks:5
+
+RUN apk update && apk add nodejs && apk add npm
