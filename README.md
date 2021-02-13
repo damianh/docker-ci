@@ -16,7 +16,13 @@ environments (see notes below).
 
 ## Changelog
 
-- 2021-01-13: Built images `dotnet-sdks:5`, `dotnet-node:5` and `dotnet-node-pulumi-awscli:2`
+- 2021-02-13
+  - Removed `dotnet-node-pulumi-awscli` images as Pulumi already supply runtime
+    specific images.
+  - Built images `dotnet-sdks:6`, `dotnet-node:6` which contains a .NET critical
+    security update.
+- 2021-01-13
+  - Built images `dotnet-sdks:5`, `dotnet-node:5` and `dotnet-node-pulumi-awscli:2`
 
 ## dotnet-sdks
 
@@ -28,11 +34,12 @@ applications.
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
-| 5 | Alpine 3.12 / x64 | .NET Core SDK 2.1.812, .NET Core SDK 3.1.405, .NET 5.0.102, git 2.26.2, docker-cli 19.03.12, glibc-2.32-r0, glibc-bin-2.32-r0 | [dockerfile](dotnet-sdks/5/dockerfile) | `docker pull damianh/dotnet-sdks:5` |
-| 4 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.404, .NET 5.0.100, git 2.26.2, docker-cli 19.03.12, glibc-2.32-r0, glibc-bin-2.32-r0 | [dockerfile](dotnet-sdks/4/dockerfile) | `docker pull damianh/dotnet-sdks:4` |
-| 3 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.404, .NET 5.0.100, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/3/dockerfile) | `docker pull damianh/dotnet-sdks:3` |
-| 2 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811, .NET Core SDK 3.1.403, .NET 5.0.100-RC.2, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/2/dockerfile) | `docker pull damianh/dotnet-sdks:2` |
-| 1 | Alpine 3.12 / x64 | .NET Core SDK 2.1.810, .NET Core SDK 3.1.400, .NET 5.0.100-RC.1, git 2.26.2, docker-cli 19.03.12 | [dockerfile](dotnet-sdks/1/dockerfile) | `docker pull damianh/dotnet-sdks:1` |
+| 6 | Alpine 3.13 / x64 | .NET Core SDK 2.1.813<BR>.NET Core SDK 3.1.406<BR>NET 5.0.103<BR>git 2.30.1<BR>docker-cli 20.10.3<BR>glibc-2.32-r0<BR>glibc-bin-2.32-r0 | [dockerfile](dotnet-sdks/6/dockerfile) | `docker pull damianh/dotnet-sdks:6` |
+| 5 | Alpine 3.12 / x64 | .NET Core SDK 2.1.812<BR>.NET Core SDK 3.1.405<BR>.NET 5.0.102<BR>git 2.26.2<BR>docker-cli 19.03.12<BR>glibc-2.32-r0<BR>glibc-bin-2.32-r0 | [dockerfile](dotnet-sdks/5/dockerfile) | `docker pull damianh/dotnet-sdks:5` |
+| 4 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811<BR>.NET Core SDK 3.1.404<BR>.NET 5.0.100<BR>git 2.26.2<BR>docker-cli 19.03.12<BR>glibc-2.32-r0<BR>glibc-bin-2.32-r0 | [dockerfile](dotnet-sdks/4/dockerfile) | `docker pull damianh/dotnet-sdks:4` |
+| 3 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811<BR>.NET Core SDK 3.1.404<BR>.NET 5.0.100<BR>git 2.26.2<BR>docker-cli 19.03.12 | [dockerfile](dotnet-sdks/3/dockerfile) | `docker pull damianh/dotnet-sdks:3` |
+| 2 | Alpine 3.12 / x64 | .NET Core SDK 2.1.811<BR>.NET Core SDK 3.1.403<BR>.NET 5.0.100-RC.2<BR>git 2.26.2<BR>docker-cli 19.03.12 | [dockerfile](dotnet-sdks/2/dockerfile) | `docker pull damianh/dotnet-sdks:2` |
+| 1 | Alpine 3.12 / x64 | .NET Core SDK 2.1.810<BR>.NET Core SDK 3.1.400<BR>.NET 5.0.100-RC.1<BR>git 2.26.2<BR>docker-cli 19.03.12 | [dockerfile](dotnet-sdks/1/dockerfile) | `docker pull damianh/dotnet-sdks:1` |
 
 ## dotnet-node
 
@@ -43,23 +50,13 @@ applications with .NET backend(s) and JavaScript SPA frontend(s).
 
 | Tag | OS Version / Arch | Contents | Dockerfile | CLI |
 | - | - | - | - | - |
-| 5 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:5, node 12.20.1, npm 6.14.10  | [dockerfile](dotnet-node/5/dockerfile) | `docker pull damianh/dotnet-node:5` |
-| 4 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:4, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/4/dockerfile) | `docker pull damianh/dotnet-node:4` |
-| 3 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:3, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/3/dockerfile) | `docker pull damianh/dotnet-node:3` |
-| 2 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:2, node 12.18.4, npm 6.14.6  | [dockerfile](dotnet-node/2/dockerfile) | `docker pull damianh/dotnet-node:2` |
-| 1 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:1, node 12.18.3, npm 6.14.6  | [dockerfile](dotnet-node/1/dockerfile) | `docker pull damianh/dotnet-node:1` |
+| 6 | Alpine 3.13 / x64 | Based on damianh/dotnet-sdks:6<BR>node 14.15.4<BR>npm 6.14.10  | [dockerfile](dotnet-node/6/dockerfile) | `docker pull damianh/dotnet-node:6` |
+| 5 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:5<BR>node 12.20.1<BR>npm 6.14.10  | [dockerfile](dotnet-node/5/dockerfile) | `docker pull damianh/dotnet-node:5` |
+| 4 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:4<BR>node 12.18.4<BR>npm 6.14.6  | [dockerfile](dotnet-node/4/dockerfile) | `docker pull damianh/dotnet-node:4` |
+| 3 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:3<BR>node 12.18.4<BR>npm 6.14.6  | [dockerfile](dotnet-node/3/dockerfile) | `docker pull damianh/dotnet-node:3` |
+| 2 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:2<BR>node 12.18.4<BR>npm 6.14.6  | [dockerfile](dotnet-node/2/dockerfile) | `docker pull damianh/dotnet-node:2` |
+| 1 | Alpine 3.12 / x64 | Based on damianh/dotnet-sdks:1<BR>node 12.18.3<BR>npm 6.14.6  | [dockerfile](dotnet-node/1/dockerfile) | `docker pull damianh/dotnet-node:1` |
 
-## dotnet-node-pulumi-awscli
-
-Image based on `dotnet-node` above with addition of Pulumi and AWS-CLI. Used to run
-Pulumi stacks in .NET or Node/Typescript.
-
-[View on DockerHub](https://hub.docker.com/r/damianh/dotnet-node/tags)
-
-| Tag | OS Version / Arch | Contents | Dockerfile | CLI |
-| - | - | - | - | - |
-| 2 | Alpine 3.12 / x64 | Based on damianh/dotnet-node:5, typescript 4.1.3, aws-cli 2.1.18, pulumi 2.17.0  | [dockerfile](dotnet-node-pulumi-awscli/1/dockerfile) | `docker pull damianh/dotnet-node-pulumi-awscli:2` |
-| 1 | Alpine 3.12 / x64 | Based on damianh/dotnet-node:4, typescript 2.5.3, aws-cli 2.1.3, pulumi 2.14.0  | [dockerfile](dotnet-node-pulumi-awscli/1/dockerfile) | `docker pull damianh/dotnet-node-pulumi-awscli:1` |
 
 ----
 [@randompunter](https://twitter.com/randompunter)

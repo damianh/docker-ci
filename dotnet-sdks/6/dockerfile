@@ -1,0 +1,35 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0.103-alpine3.13
+
+# Install DotNet Core 3.1
+RUN wget -O dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Sdk/3.1.406/dotnet-sdk-3.1.406-linux-musl-x64.tar.gz \
+    && mkdir -p /usr/share/dotnet \
+    && tar -C /usr/share/dotnet -xzf dotnet.tar.gz \
+    && rm dotnet.tar.gz
+
+# Install DotNet Core 2.1
+RUN wget -O dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Sdk/2.1.813/dotnet-sdk-2.1.813-linux-musl-x64.tar.gz \
+    && mkdir -p /usr/share/dotnet \
+    && tar -C /usr/share/dotnet -xzf dotnet.tar.gz \
+    && rm dotnet.tar.gz
+
+RUN apk update \
+    && apk add git \
+    && apk add docker-cli \
+    && apk add zip
+
+# Workaround for https://github.com/grpc/grpc/issues/18428
+# Also see https://github.com/sgerrand/alpine-pkg-glibc
+# https://stackoverflow.com/a/61268529
+
+ENV GLIBC_VER=2.32-r0
+
+RUN apk update && apk --no-cache add ca-certificates wget \
+    && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
+    && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-${GLIBC_VER}.apk \
+    && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-bin-${GLIBC_VER}.apk \
+    && apk add --no-cache \
+        glibc-${GLIBC_VER}.apk \
+        glibc-bin-${GLIBC_VER}.apk \
+    && rm glibc-${GLIBC_VER}.apk \
+    && rm glibc-bin-${GLIBC_VER}.apk \
+    && rm -rf /var/cache/apk/*
