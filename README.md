@@ -27,7 +27,7 @@ environments (see notes below).
 ## dotnet-sdks
 
 Image containing supported versions of .NET/.NET Core SDKs (5.x, 3.1.x,
-2.1.x),git, and docker-cli. Used to build .NET libraries, services and
+2.1.x), git, and docker-cli. Used to build .NET libraries, services and
 applications.
 
 [View on DockerHub](https://hub.docker.com/r/damianh/dotnet-sdks/tags)
